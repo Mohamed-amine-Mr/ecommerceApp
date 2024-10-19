@@ -18,6 +18,12 @@ const Navbar = () => {
             >
               CATEGORIES
             </Link>
+            <Link
+              to="/productDetails"
+              className="text-gray-800 hover:text-blue-600 transition duration-300"
+            >
+              PRODUCT DETAILS
+            </Link>
 
             <Link
               to="/cart"

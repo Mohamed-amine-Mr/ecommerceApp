@@ -37,7 +37,7 @@ function App() {
             <Route path="/categories/lamps" element={<LampsCatego />} />
             <Route path="/categories/chairs" element={<ChairsCatego />} />
             <Route path="/categories/all" element={<CategoriesAll />} />
-            <Route path="/product" element={<ProductDetails />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
           </Routes>
         </Router>
       </ShopContextProvider>
