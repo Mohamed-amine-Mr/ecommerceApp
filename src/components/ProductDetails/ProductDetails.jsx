@@ -8,11 +8,11 @@ const ProductDetails = () => {
     return <div className="h-96 bg-red-700">Product not found</div>;
   }
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-28">
       <div className="flex flex-col md:flex-row">
         <div className="md:w-1/2 lg:w-1/2 md:pr-8">
           <img
-            src={product.imgDetail1}
+            src={product.productImage}
             alt={product.productName}
             className="w-full rounded-lg shadow-lg"
           />
@@ -22,11 +22,7 @@ const ProductDetails = () => {
               alt="Detail 1"
               className="w-20 h-20 rounded-md cursor-pointer"
             />
-            <img
-              src={product.imgDetail2}
-              alt="Detail 2"
-              className="w-20 h-20 rounded-md cursor-pointer"
-            />
+
             <img
               src={product.imgDetail2}
               alt="Detail 3"
@@ -77,14 +73,3 @@ const ProductDetails = () => {
   );
 };
 export default ProductDetails;
-// const ProductDetails = () => {
-//   return (
-//     <div className="container mx-auto px-4 py-8">
-//       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
-//         {PRODUCTS.map((product) => (
-//           <ProductData key={product.id} product={product} />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };

@@ -14,6 +14,7 @@ import {
   ChairsCatego,
   ProductDetails,
   Categories,
+  ProductPageList,
 } from "./components/components.jsx";
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/categories/chairs" element={<ChairsCatego />} />
             <Route path="/categories/all" element={<CategoriesAll />} />
             <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/productPage" element={<ProductPageList />} />
           </Routes>
         </Router>
       </ShopContextProvider>

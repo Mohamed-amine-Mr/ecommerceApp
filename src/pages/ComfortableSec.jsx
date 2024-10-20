@@ -1,30 +1,4 @@
-// import imgComftbl from "../../assets/imgs/comfotabeliniving.jpg";
-// import { Link } from "react-router-dom";
-// const ComfortaLiving = () => {
-//   return (
-//     <>
-//       <div className="banner-container-reverse">
-//         <img src={imgComftbl} alt="banner" />
-//         <div className="text-side">
-//           <div className="text">
-//             <h2>Comfortable &amp; Elegante Living</h2>
-//             <p>
-//               RAOUF Products are all made to standard sizes so that you can mix
-//               and match them freely.
-//             </p>
-//             <Link to="/categories/all">
-//               <button>Shop now</button>
-//             </Link>
-//           </div>
-//         </div>
-//         <div className="img-side"></div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default ComfortaLiving;
-import imgComftbl from "../../assets/imgs/comfotabeliniving.jpg";
+import imgComftbl from "../assets/imgs/comfotabeliniving.jpg";
 import { Link } from "react-router-dom";
 
 const ComfortableSec = () => {

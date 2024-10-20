@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
-import livecomfor from "../../assets/imgs/home.jpg";
-import electronics from "../../assets/imgs/electron.jpg";
-import skinCare from "../../assets/imgs/skin.jpg";
-import kitchen from "../../assets/imgs/kitchen.jpg";
+import livecomfor from "../assets/imgs/home.jpg";
+import electronics from "../assets/imgs/electron.jpg";
+import skinCare from "../assets/imgs/skin.jpg";
+import kitchen from "../assets/imgs/kitchen.jpg";
 import {
   ComfortableSec,
   Creativeprod,
   Footer,
   ProudProducts,
   Trending,
-} from "../pages.jsx";
+} from "./pages.jsx";
 
 const Home = () => {
   return (
     <>
       <div className="min-h-screen bg-gray-100 pt-52 lg:pt-1 mb-52" id="home">
-        <div className="container mx-auto  lg:px-8 h-[calc(100vh-16.5rem)]">
+        <div className="container mx-auto  lg:px-8 h-[calc(100vh-23.5rem)] ">
           <div className="grid grid-cols-4 lg:grid-cols-12 gap-1 h-full">
             <div className="col-span-1 lg:col-span-6 group">
               <Link to="/categories/furnitures" className="block h-full">

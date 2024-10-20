@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { PRODUCTS } from "../../products";
-import { Product } from "../shop/product";
+import { PRODUCTS } from "../products";
+import { Product } from "./shop/product";
 
 const Trending = () => {
   const [startIndex, setStartIndex] = useState(0);
