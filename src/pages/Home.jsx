@@ -15,10 +15,10 @@ const Home = () => {
   return (
     <>
       <div
-        className="min-h-screen bg-gray-100 pt-32 lg:pt-1 mb-10 lg:mb-52"
+        className="min-h-screen bg-gray-100 pt-40 lg:pt-1 mb-10 lg:mb-52"
         id="home"
       >
-        <div className="container mx-auto  lg:px-8 h-[calc(100vh-10.5rem)]  lg:h-[calc(100vh-13.5rem)] ">
+        <div className="container mx-auto  lg:px-8 h-[calc(100vh-18.5rem)]  lg:h-[calc(100vh-13.5rem)] ">
           <div className="grid grid-cols-4 lg:grid-cols-12 gap-1 h-full">
             <div className="col-span-1 lg:col-span-6 group">
               <Link to="/categories/furnitures" className="block h-full">
@@ -28,7 +28,7 @@ const Home = () => {
                     alt="Live Comfortably"
                     className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75"
                   />
-                  <div className="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/70 to-transparent">
+                  <div className="absolute inset-0 flex items-end pb-6 pl-1 lg:p-6 bg-gradient-to-t from-black/70 to-transparent">
                     <p className="text-white text-base lg:text-xl font-semibold">
                       Live Comfortably
                     </p>
@@ -45,7 +45,7 @@ const Home = () => {
                     alt="Skincare"
                     className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75"
                   />
-                  <div className="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/70 to-transparent">
+                  <div className="absolute inset-0 flex items-end pb-6 pl-6 lg:p-6 bg-gradient-to-t from-black/70 to-transparent">
                     <p className="text-white text-base lg:text-xl font-semibold">
                       Skincare
                     </p>
@@ -63,7 +63,7 @@ const Home = () => {
                       alt="Kitchen"
                       className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75"
                     />
-                    <div className="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/70 to-transparent">
+                    <div className="absolute inset-0 flex items-end pb-6 pl-6 lg:p-6 bg-gradient-to-t from-black/70 to-transparent">
                       <p className="text-white text-base lg:text-xl font-semibold">
                         Kitchen
                       </p>
@@ -80,7 +80,7 @@ const Home = () => {
                       alt="Electronics"
                       className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75"
                     />
-                    <div className="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/70 to-transparent">
+                    <div className="absolute inset-0 flex items-end pb-6 pl-6 lg:p-6 bg-gradient-to-t from-black/70 to-transparent ">
                       <p className="text-white text-base lg:text-xl font-semibold">
                         Electronics
                       </p>
