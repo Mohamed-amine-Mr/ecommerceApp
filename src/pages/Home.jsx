@@ -14,8 +14,11 @@ import {
 const Home = () => {
   return (
     <>
-      <div className="min-h-screen bg-gray-100 pt-52 lg:pt-1 mb-52" id="home">
-        <div className="container mx-auto  lg:px-8 h-[calc(100vh-23.5rem)] ">
+      <div
+        className="min-h-screen bg-gray-100 pt-32 lg:pt-1 mb-10 lg:mb-52"
+        id="home"
+      >
+        <div className="container mx-auto  lg:px-8 h-[calc(100vh-10.5rem)]  lg:h-[calc(100vh-13.5rem)] ">
           <div className="grid grid-cols-4 lg:grid-cols-12 gap-1 h-full">
             <div className="col-span-1 lg:col-span-6 group">
               <Link to="/categories/furnitures" className="block h-full">
