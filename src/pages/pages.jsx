@@ -4,3 +4,4 @@ export { default as ProudProducts } from "./ProudProducts";
 export { default as Trending } from "./Trending";
 export { default as Footer } from "./Footer";
 export { default as ComfortableSec } from "./ComfortableSec";
+// export { default as CheckoutPage } from "./cart/checkoutPage";

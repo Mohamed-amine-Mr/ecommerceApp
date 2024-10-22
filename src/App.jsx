@@ -36,6 +36,7 @@ function App() {
             <Route path="/" element=<Home /> />
             <Route path="/shop" element=<Shop /> />
             <Route path="/cart" element=<Cart /> />
+            {/* <Route path="/cart/checkoutPage" element={<CheckoutPage />} /> */}
             <Route path="/categories/electronics" element={<ElectrCatego />} />
             <Route path="/categories/clothes" element={<ClothesCatego />} />
             <Route path="/categories/skincare" element={<SkncarCatego />} />
