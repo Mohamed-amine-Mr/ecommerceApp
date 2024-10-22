@@ -1,6 +1,6 @@
 import { PRODUCTS } from "../../products";
 import { CategorieInfo, ProductPage } from "../components";
-const ProductPageList = () => {
+const AllProductInfo = () => {
   return (
     <>
       <CategorieInfo />
@@ -10,4 +10,5 @@ const ProductPageList = () => {
     </>
   );
 };
-export default ProductPageList;
+
+export default AllProductInfo;

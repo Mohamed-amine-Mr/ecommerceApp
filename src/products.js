@@ -1,68 +1,100 @@
 import armchairSheepskin from "./assets/imgs/1.jpg";
-import cubeVaseBlack from "./assets/imgs/2.png";
-import traditionalArmchair from "./assets/imgs/3.jpg";
-import antiDarkLight from "./assets/imgs/4.jpg";
-import lampLightBlue from "./assets/imgs/5.png";
-import simpleGoldenLamp from "./assets/imgs/6.png";
-import blackWhiteLamp from "./assets/imgs/7.jpg";
-import oakSpanishChair from "./assets/imgs/8.png";
-import pulpUnit5Compartments from "./assets/imgs/9.jpg";
-import gejstShelfA from "./assets/imgs/10.jpg";
-import comfyChair from "./assets/imgs/11.jpg";
-import tableLamp from "./assets/imgs/12.png";
-import matBlackLamp from "./assets/imgs/13.png";
-import copenhagenArmchair from "./assets/imgs/14.png";
-import goldenModernLight from "./assets/imgs/15.jpg";
-import sunPendantBlack from "./assets/imgs/16.jpg";
-import bodyOil50ml from "./assets/imgs/18.jpg";
-import bodyOil200ml from "./assets/imgs/19.jpg";
-import cottonPads180 from "./assets/imgs/20.jpg";
-import iphone from "./assets/imgs/21.png";
-import macbookPro from "./assets/imgs/22.webp";
-import canonM50 from "./assets/imgs/23.webp";
-import denimJacket from "./assets/imgs/24.webp";
-import ledLightStrips from "./assets/imgs/25.png";
-import spectrumLsTee from "./assets/imgs/26.png";
-import canonCamera from "./assets/imgs/27.png";
-import dontTripHat from "./assets/imgs/28.png";
-
-import armchairSheepskinDetail1 from "./assets/descriptionImges/1.webp";
-import armchairSheepskinDetail2 from "./assets/descriptionImges/2.webp";
-import cubeVaseDetail1 from "./assets/descriptionImges/3.jpg";
-import cubeVaseDetail2 from "./assets/descriptionImges/4.jpg";
-import traditionalArmchairDetail1 from "./assets/descriptionImges/5.webp";
-import traditionalArmchairDetail2 from "./assets/descriptionImges/6.webp";
-import antiDarkLightDetail1 from "./assets/descriptionImges/7.webp";
-import antiDarkLightDetail2 from "./assets/descriptionImges/8.webp";
-import lampLightBlueDetail1 from "./assets/descriptionImges/9.jpg";
-import lampLightBlueDetail2 from "./assets/descriptionImges/10.jpg";
+import armchairSheepskinDetail1 from "./assets/descriptionImges/3.jpg";
+import armchairSheepskinDetail2 from "./assets/descriptionImges/4.jpg";
+//
+import simpleGoldenLamp from "./assets/imgs/2.png";
 import simpleGoldenLampDetail1 from "./assets/descriptionImges/11.webp";
 import simpleGoldenLampDetail2 from "./assets/descriptionImges/12.webp";
+//
+import traditionalArmchair from "./assets/imgs/3.jpg";
+import traditionalArmchairDetail1 from "./assets/descriptionImges/19.webp";
+import traditionalArmchairDetail2 from "./assets/descriptionImges/20.webp";
+//
+import antiDarkLight from "./assets/imgs/4.jpg";
+import antiDarkLightDetail1 from "./assets/descriptionImges/17.webp";
+import antiDarkLightDetail2 from "./assets/descriptionImges/18.jpg";
+//
+import lampLightBlue from "./assets/imgs/5.png";
+//
+import cubeVaseBlack from "./assets/imgs/6.png";
+import cubeVaseBlack2 from "./assets/descriptionImges/25.webp";
+import cubeVaseBlack3 from "./assets/descriptionImges/26.webp";
+//
+import blackWhiteLamp from "./assets/imgs/7.jpg";
 import blackWhiteLampDetail1 from "./assets/descriptionImges/13.webp";
 import blackWhiteLampDetail2 from "./assets/descriptionImges/14.webp";
-import oakSpanishChairDetail1 from "./assets/descriptionImges/15.webp";
-import oakSpanishChairDetail2 from "./assets/descriptionImges/16.jpg";
-import pulpUnitDetail1 from "./assets/descriptionImges/17.webp";
-import pulpUnitDetail2 from "./assets/descriptionImges/18.jpg";
-import gejstShelfDetail1 from "./assets/descriptionImges/19.webp";
-import gejstShelfDetail2 from "./assets/descriptionImges/20.webp";
-import comfyChairDetail1 from "./assets/descriptionImges/21.webp";
+//
+import oakSpanishChair from "./assets/imgs/8.png";
+import oakSpanishChair1 from "./assets/descriptionImges/36.webp";
+import oakSpanishChair2 from "./assets/descriptionImges/37.webp";
+//
+import pulpUnit5Compartments from "./assets/imgs/9.jpg";
+import pulpUnitDetail1 from "./assets/descriptionImges/28.jpg";
+import pulpUnitDetail2 from "./assets/descriptionImges/29.jpg";
+//
+import gejstShelfA from "./assets/imgs/10.jpg";
+import gejstShelfDetail1 from "./assets/descriptionImges/5.webp";
+import gejstShelfDetail2 from "./assets/descriptionImges/6.webp";
+//
+import comfyChair from "./assets/imgs/11.jpg";
 import comfyChairDetail2 from "./assets/descriptionImges/22.webp";
-import tableLampDetail1 from "./assets/descriptionImges/23.webp";
-import tableLampDetail2 from "./assets/descriptionImges/24.webp";
-import matBlackLampDetail1 from "./assets/descriptionImges/25.webp";
-import matBlackLampDetail2 from "./assets/descriptionImges/26.webp";
-import copenhagenArmchairDetail1 from "./assets/descriptionImges/27.webp";
-import copenhagenArmchairDetail2 from "./assets/descriptionImges/28.jpg";
-import goldenModernLightDetail1 from "./assets/descriptionImges/29.jpg";
-import goldenModernLightDetail2 from "./assets/descriptionImges/30.jpg";
-import sunPendantBlackDetail1 from "./assets/descriptionImges/31.jpg";
-import sunPendantBlackDetail2 from "./assets/descriptionImges/32.jpg";
-import bodyOilDetail1 from "./assets/descriptionImges/33.jpg";
+import comfyChairDetail3 from "./assets/descriptionImges/21.webp";
+//
+//
+import tableLamp from "./assets/imgs/12.png";
+import tableLampDetail2 from "./assets/descriptionImges/7.webp";
+import tableLampDetail1 from "./assets/descriptionImges/8.webp";
+//
+import matBlackLamp from "./assets/imgs/13.png";
+import matBlackLamp1 from "./assets/descriptionImges/27.webp";
+
+//
+import copenhagenArmchair from "./assets/imgs/14.png";
+import copenhagenArmchairDetail2 from "./assets/descriptionImges/24.webp";
+import copenhagenArmchair3 from "./assets/descriptionImges/23.webp";
+//
+import goldenModernLight from "./assets/imgs/15.jpg";
+import goldenModernLight1 from "./assets/descriptionImges/1.webp";
+import goldenModernLight2 from "./assets/descriptionImges/2.webp";
+//
+
+import sunPendantBlack from "./assets/imgs/16.jpg";
+import sunPendantBlack1 from "./assets/descriptionImges/15.webp";
+import sunPendantBlack2 from "./assets/descriptionImges/16.jpg";
+//
+import kitchenfrom from "./assets/imgs/17.jpg";
+import kitchenfrom1 from "./assets/descriptionImges/9.jpg";
+import kitchenfrom2 from "./assets/descriptionImges/10.jpg";
+//
+import bodyOil50ml from "./assets/imgs/18.jpg";
+import bodyOil50ml1 from "./assets/descriptionImges/30.jpg";
+import bodyOil50ml2 from "./assets/descriptionImges/31.jpg";
+
+//
+import bodyOil200ml from "./assets/imgs/19.jpg";
 import bodyOilDetail2 from "./assets/descriptionImges/34.jpg";
 import bodyOilDetail3 from "./assets/descriptionImges/35.jpg";
-import cottonPadsDetail1 from "./assets/descriptionImges/36.webp";
-import cottonPadsDetail2 from "./assets/descriptionImges/37.webp";
+//
+import cottonPads180 from "./assets/imgs/20.jpg";
+import cottonPads181 from "./assets/descriptionImges/32.jpg";
+import cottonPads182 from "./assets/descriptionImges/33.jpg";
+//
+import iphone from "./assets/imgs/21.png";
+//
+import dontTripHat from "./assets/imgs/22.webp";
+//
+import tSHirt from "./assets/imgs/23.webp";
+//
+import dontTripShirt from "./assets/imgs/24.webp";
+//
+import ledLightStrips from "./assets/imgs/25.png";
+//
+import denimJacket from "./assets/imgs/26.png";
+//
+import canonCamera from "./assets/imgs/27.png";
+//
+import macbookPro from "./assets/imgs/28.png";
+//
 
 export const PRODUCTS = [
   {
@@ -81,8 +113,8 @@ export const PRODUCTS = [
   },
   {
     id: 2,
-    imgDetail1: cubeVaseDetail1,
-    imgDetail2: cubeVaseDetail2,
+    imgDetail1: cubeVaseBlack,
+    imgDetail2: cubeVaseBlack,
     category: "furniture",
     productName: "Cube Lolo Vase Black",
     price: 161,
@@ -123,8 +155,8 @@ export const PRODUCTS = [
   },
   {
     id: 5,
-    imgDetail1: lampLightBlueDetail1,
-    imgDetail2: lampLightBlueDetail2,
+    imgDetail1: lampLightBlue,
+    imgDetail2: lampLightBlue,
     category: "lamp",
     productName: "Lamp Light Blue",
     price: 79,
@@ -165,8 +197,8 @@ export const PRODUCTS = [
   },
   {
     id: 8,
-    imgDetail1: oakSpanishChairDetail1,
-    imgDetail2: oakSpanishChairDetail2,
+    imgDetail1: oakSpanishChair1,
+    imgDetail2: oakSpanishChair2,
     category: "chair",
     productName: "Oak Spanish Chair",
     price: 520.0,
@@ -207,8 +239,8 @@ export const PRODUCTS = [
   },
   {
     id: 11,
-    imgDetail1: comfyChairDetail1,
-    imgDetail2: comfyChairDetail2,
+    imgDetail1: comfyChairDetail2,
+    imgDetail2: comfyChairDetail3,
     category: "chair",
     productName: "Comfy Chair",
     price: 119.0,
@@ -235,8 +267,8 @@ export const PRODUCTS = [
   },
   {
     id: 13,
-    imgDetail1: matBlackLampDetail1,
-    imgDetail2: matBlackLampDetail2,
+    imgDetail1: matBlackLamp,
+    imgDetail2: matBlackLamp1,
     category: "lamp",
     productName: "Mat Black Lamp",
     price: 175.0,
@@ -249,7 +281,7 @@ export const PRODUCTS = [
   },
   {
     id: 14,
-    imgDetail1: copenhagenArmchairDetail1,
+    imgDetail1: copenhagenArmchairDetail2,
     imgDetail2: copenhagenArmchairDetail2,
     category: "chair",
     productName: "Copenhagen Armchair",
@@ -263,12 +295,12 @@ export const PRODUCTS = [
   },
   {
     id: 15,
-    imgDetail1: goldenModernLightDetail1,
-    imgDetail2: goldenModernLightDetail2,
+    imgDetail1: goldenModernLight,
+    imgDetail2: goldenModernLight1,
     category: "lamp",
     productName: "Golden Modern Light",
     price: 189,
-    productImage: goldenModernLight,
+    productImage: goldenModernLight2,
     specs:
       "Tom Dixon and FRONT have created an incredibly beautiful pendant, in a completely unique design. The lamp is made using a special metallization technology that makes the look completely unique. The first of its kind. the lamp is transparent when its on and you can see the exciting play of colors.",
     texture: "Plastic",
@@ -277,8 +309,8 @@ export const PRODUCTS = [
   },
   {
     id: 16,
-    imgDetail1: sunPendantBlackDetail1,
-    imgDetail2: sunPendantBlackDetail2,
+    imgDetail1: lampLightBlue,
+    imgDetail2: lampLightBlue,
     category: "lamp",
     productName: "The Sun Pendant Black",
     price: 160,
@@ -291,8 +323,8 @@ export const PRODUCTS = [
   },
   {
     id: 18,
-    imgDetail1: bodyOilDetail1,
-    imgDetail2: bodyOilDetail2,
+    imgDetail1: bodyOil200ml,
+    imgDetail2: bodyOil50ml,
     category: "skin-care",
     productName: "Body Oil 50ml",
     price: 45.0,
@@ -306,7 +338,7 @@ export const PRODUCTS = [
   {
     id: 19,
     imgDetail1: bodyOilDetail3,
-    imgDetail2: cottonPadsDetail1,
+    imgDetail2: bodyOil200ml,
     category: "skin-care",
     productName: "Body Oil 200ml",
     price: 67,
@@ -319,8 +351,8 @@ export const PRODUCTS = [
   },
   {
     id: 20,
-    imgDetail1: cottonPadsDetail1,
-    imgDetail2: cottonPadsDetail2,
+    imgDetail1: cottonPads180,
+    imgDetail2: cottonPads180,
     category: "skin-care",
     productName: "Unbleached Cotton Pads 180",
     price: 33.0,
@@ -333,8 +365,8 @@ export const PRODUCTS = [
   },
   {
     id: 21,
-    imgDetail1: cottonPadsDetail1,
-    imgDetail2: cottonPadsDetail2,
+    imgDetail1: iphone,
+    imgDetail2: iphone,
     category: "electronic",
     productName: "iPhone",
     price: 999.0,
@@ -347,8 +379,8 @@ export const PRODUCTS = [
   },
   {
     id: 22,
-    imgDetail1: cottonPadsDetail1,
-    imgDetail2: cottonPadsDetail2,
+    imgDetail1: macbookPro,
+    imgDetail2: macbookPro,
     category: "electronic",
     productName: "MacBook Pro 2022 (M1)",
     price: 1999.0,
@@ -361,22 +393,22 @@ export const PRODUCTS = [
   },
   {
     id: 23,
-    imgDetail1: cottonPadsDetail1,
-    imgDetail2: cottonPadsDetail2,
-    category: "electronic",
-    productName: "Canon M50 Camera",
-    price: 699.0,
-    productImage: canonM50,
+    imgDetail1: kitchenfrom,
+    imgDetail2: kitchenfrom1,
+    category: "kitchen",
+    productName: "Pop-Up Toaster",
+    price: 199.0,
+    productImage: kitchenfrom2,
     specs:
-      "Versatile mirrorless camera with 24.1MP APS-C CMOS sensor and DIGIC 8 image processor.",
+      "With simple and clean rectangular round-cornered design, the large bread slots allow to toast 2 pieces o",
     texture: "Plastic and Metal",
-    weight: "390g",
-    size: "116.3 x 88.1 x 58.7 mm",
+    weight: " 1.2kg",
+    size: "W25 x D16.5 x H19.5cm",
   },
   {
     id: 24,
-    imgDetail1: cottonPadsDetail1,
-    imgDetail2: cottonPadsDetail2,
+    imgDetail1: WakeLockSentinel,
+    imgDetail2: WakeLockSentinel,
     category: "clothes",
     productName: "WLS Van Gogh Denim Jacket",
     price: 228.0,
@@ -388,8 +420,8 @@ export const PRODUCTS = [
   },
   {
     id: 25,
-    imgDetail1: cottonPadsDetail1,
-    imgDetail2: cottonPadsDetail2,
+    imgDetail1: ledLightStrips,
+    imgDetail2: ledLightStrips,
     category: "electronic",
     productName: "LED Light Strips",
     price: 19.99,
@@ -401,12 +433,12 @@ export const PRODUCTS = [
   },
   {
     id: 26,
-    imgDetail1: cottonPadsDetail1,
-    imgDetail2: cottonPadsDetail2,
+    imgDetail1: tSHirt,
+    imgDetail2: tSHirt,
     category: "clothes",
     productName: "SPECTRUM LS TEE",
     price: 68.0,
-    productImage: spectrumLsTee,
+    productImage: tSHirt,
     specs: "Long sleeve t-shirt with vibrant spectrum design.",
     texture: "Cotton",
     weight: "200g",
@@ -414,8 +446,8 @@ export const PRODUCTS = [
   },
   {
     id: 27,
-    imgDetail1: cottonPadsDetail1,
-    imgDetail2: cottonPadsDetail2,
+    imgDetail1: canonCamera,
+    imgDetail2: canonCamera,
     category: "electronic",
     productName: "Canon Camera",
     price: 120.0,
@@ -427,8 +459,8 @@ export const PRODUCTS = [
   },
   {
     id: 28,
-    imgDetail1: cottonPadsDetail1,
-    imgDetail2: cottonPadsDetail2,
+    imgDetail1: dontTripHat,
+    imgDetail2: dontTripHat,
     category: "clothes",
     productName: "DON'T TRIP UNSTRUCTURED HAT",
     price: 40.0,

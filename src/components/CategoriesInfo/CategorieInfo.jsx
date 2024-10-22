@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 
-const Categories = () => {
+const CategorieInfo = () => {
   const categoriesList = [
-    "All",
-    "Furnitures",
-    "Electronics",
-    "Lamps",
-    "Clothes",
-    "Chairs",
-    "Skin Care",
-    "kitchen",
+    "AllProductInfo",
+    "FurnituresInfo",
+    "ElectronicsInfo",
+    "LampsInfo",
+    "ClothesInfo",
+    "ChairsInfo",
+    "SkinCareInfo",
+    "KitchenInfo",
   ];
 
   return (
@@ -44,7 +44,7 @@ const Categories = () => {
           {categoriesList.map((cat) => (
             <Link
               key={cat}
-              to={`/categories/${cat.toLowerCase().replace(" ", "")}`}
+              to={`/productPage/${cat.toLowerCase().replace(" ", "")}`}
             >
               <button
                 className={`px-3 py-2 text-gray-800 rounded-md text-sm font-medium transition duration-300`}
@@ -59,4 +59,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default CategorieInfo;

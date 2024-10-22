@@ -1,13 +1,17 @@
 import { PRODUCTS } from "../../products";
 import { CategorieInfo, ProductPage } from "../components";
-const ProductPageList = () => {
+
+const LampsInfo = () => {
+  const fil = PRODUCTS.filter((product) => product.category === "lamp");
+
   return (
     <>
       <CategorieInfo />
-      {PRODUCTS.map((detail) => (
+      {fil.map((detail) => (
         <ProductPage detail={detail} key={detail.id} />
       ))}
     </>
   );
 };
-export default ProductPageList;
+
+export default LampsInfo;
