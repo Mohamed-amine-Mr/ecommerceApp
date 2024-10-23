@@ -8,12 +8,161 @@ const ProductPage = ({ detail }) => {
   const [currentImage, setCurrentImage] = useState(detail.productImage);
   const [totalPrice, setTotalPrice] = useState(detail.price);
   const cartItemAmount = cartItems[detail.id] || 0;
+  const [showCheckout, setShowCheckout] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    address: "",
+    cardNumber: "",
+  });
 
-  // Update total price whenever quantity changes
   useEffect(() => {
     setTotalPrice(detail.price * cartItemAmount);
   }, [cartItemAmount, detail.price]);
-  // Add form state
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmitOrder = (e) => {
+    e.preventDefault();
+    alert(`Order placed successfully! Total: $${totalPrice.toFixed(2)}`);
+    console.log("Order details:", formData);
+    setShowCheckout(false);
+  };
+
+  if (showCheckout) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-2xl mx-auto bg-white rounded-lg shadow p-6">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold">Checkout</h2>
+            <button
+              onClick={() => setShowCheckout(false)}
+              className="text-blue-600 hover:text-blue-800"
+            >
+              ← Back to Product
+            </button>
+          </div>
+
+          {/* Order Summary */}
+          <div className="bg-gray-50 p-4 rounded-lg mb-6">
+            <h3 className="font-semibold mb-2">Order Summary</h3>
+            <div className="flex justify-between items-center mb-2">
+              <div>
+                <p className="font-medium">{detail.productName}</p>
+                <p className="text-sm text-gray-600">
+                  Quantity: {cartItemAmount || 1}
+                </p>
+              </div>
+              <p className="font-bold">${totalPrice.toFixed(2)}</p>
+            </div>
+          </div>
+
+          <form onSubmit={handleSubmitOrder} className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  className="w-full p-2 border border-gray-300 rounded-md"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  className="w-full p-2 border border-gray-300 rounded-md"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="w-full p-2 border border-gray-300 rounded-md"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Shipping Address
+              </label>
+              <input
+                type="text"
+                name="address"
+                value={formData.address}
+                onChange={handleInputChange}
+                className="w-full p-2 border border-gray-300 rounded-md"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Card Number
+              </label>
+              <input
+                type="text"
+                name="cardNumber"
+                value={formData.cardNumber}
+                onChange={handleInputChange}
+                className="w-full p-2 border border-gray-300 rounded-md"
+                placeholder="1234 5678 9012 3456"
+                required
+              />
+            </div>
+
+            <div className="border-t pt-4 mt-6">
+              <div className="flex justify-between mb-2">
+                <span>Subtotal:</span>
+                <span>${totalPrice.toFixed(2)}</span>
+              </div>
+              <div className="flex justify-between mb-2">
+                <span>Shipping:</span>
+                <span>$9.99</span>
+              </div>
+              <div className="flex justify-between font-bold text-lg">
+                <span>Total:</span>
+                <span>${(totalPrice + 9.99).toFixed(2)}</span>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700 transition-colors mt-6"
+            >
+              Place Order ${(totalPrice + 9.99).toFixed(2)}
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -120,7 +269,10 @@ const ProductPage = ({ detail }) => {
                   </span>
                 )}
               </button>
-              <button className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition-colors">
+              <button
+                onClick={() => setShowCheckout(true)}
+                className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition-colors"
+              >
                 BUY NOW
               </button>
             </div>
