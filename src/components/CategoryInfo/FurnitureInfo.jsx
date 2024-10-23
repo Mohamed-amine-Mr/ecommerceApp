@@ -1,12 +1,12 @@
 import { PRODUCTS } from "../../products";
-import { CategorieInfo, ProductPage } from "../components";
+import { CategoryInfo, ProductPage } from "../components";
 
-const FurnituresInfo = () => {
+const FurnitureInfo = () => {
   const fil = PRODUCTS.filter((product) => product.category === "furniture");
 
   return (
     <>
-      <CategorieInfo />
+      <CategoryInfo />
       {fil.map((detail) => (
         <ProductPage detail={detail} key={detail.id} />
       ))}
@@ -14,4 +14,4 @@ const FurnituresInfo = () => {
   );
 };
 
-export default FurnituresInfo;
+export default FurnitureInfo;

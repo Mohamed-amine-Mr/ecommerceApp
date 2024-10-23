@@ -6,7 +6,7 @@ import img2 from "../../assets/imgs/creativeproducts.jpg"; // Replace with your 
 import img3 from "../../assets/imgs/home.jpg"; // Replace with your image path
 import img4 from "../../assets/imgs/comfotabeliniving.jpg"; // Replace with your image path
 import "./ComfortableSec.css";
-const ComfortableSec = () => {
+const ComfortableSection = () => {
   const images = [imgComftbl, img2, img3, img4];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -94,4 +94,4 @@ const ComfortableSec = () => {
   );
 };
 
-export default ComfortableSec;
+export default ComfortableSection;

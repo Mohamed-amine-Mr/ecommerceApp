@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const CategorieInfo = () => {
+const CategoryInfo = () => {
   const productDetailNavigation = [
     "All Product Info",
     "Furnitures Info",
@@ -59,4 +59,4 @@ const CategorieInfo = () => {
   );
 };
 
-export default CategorieInfo;
+export default CategoryInfo;

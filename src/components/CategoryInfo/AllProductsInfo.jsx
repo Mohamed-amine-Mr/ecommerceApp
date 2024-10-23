@@ -1,9 +1,9 @@
 import { PRODUCTS } from "../../products";
-import { CategorieInfo, ProductPage } from "../components";
-const AllProductInfo = () => {
+import { CategoryInfo, ProductPage } from "../components";
+const AllProductsInfo = () => {
   return (
     <>
-      <CategorieInfo />
+      <CategoryInfo />
       {PRODUCTS.map((detail) => (
         <ProductPage detail={detail} key={detail.id} />
       ))}
@@ -11,4 +11,4 @@ const AllProductInfo = () => {
   );
 };
 
-export default AllProductInfo;
+export default AllProductsInfo;

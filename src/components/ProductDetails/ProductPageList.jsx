@@ -1,9 +1,9 @@
 import { PRODUCTS } from "../../products";
-import { CategorieInfo, ProductPage } from "../components";
+import { CategoryInfo, ProductPage } from "../components";
 const ProductPageList = () => {
   return (
     <>
-      <CategorieInfo />
+      <CategoryInfo />
       {PRODUCTS.map((detail) => (
         <ProductPage detail={detail} key={detail.id} />
       ))}

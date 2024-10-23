@@ -2,9 +2,9 @@ import { PRODUCTS } from "../../products";
 import { Categories } from "../components";
 import { Product } from "../../features/shop/product"; // Use the Product component
 
-const LampsCatego = () => {
+const KitchenCategory = () => {
   const filteredProducts = PRODUCTS.filter(
-    (product) => product.category === "lamp"
+    (product) => product.category === "kitchen"
   );
 
   return (
@@ -21,4 +21,4 @@ const LampsCatego = () => {
   );
 };
 
-export default LampsCatego;
+export default KitchenCategory;

@@ -1,12 +1,12 @@
 import { PRODUCTS } from "../../products";
-import { CategorieInfo, ProductPage } from "../components";
+import { CategoryInfo, ProductPage } from "../components";
 
 const LampsInfo = () => {
   const fil = PRODUCTS.filter((product) => product.category === "lamp");
 
   return (
     <>
-      <CategorieInfo />
+      <CategoryInfo />
       {fil.map((detail) => (
         <ProductPage detail={detail} key={detail.id} />
       ))}
