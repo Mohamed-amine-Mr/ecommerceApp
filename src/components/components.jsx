@@ -10,7 +10,6 @@ export { default as FurnituresCatego } from "./mainCategories/FurnituresCatego";
 export { default as LampsCatego } from "./mainCategories/LampsCatego";
 //
 export { default as ProductPageList } from "./ProductDetails/ProductPageList";
-
 export { default as ProductDetails } from "./ProductDetails/ProductDetails";
 export { default as ProductPage } from "./ProductDetails/ProductPage";
 // categories info

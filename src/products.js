@@ -51,16 +51,16 @@ import matBlackLamp1 from "./assets/descriptionImges/27.webp";
 //
 import copenhagenArmchair from "./assets/imgs/14.png";
 import copenhagenArmchairDetail2 from "./assets/descriptionImges/24.webp";
-import copenhagenArmchair3 from "./assets/descriptionImges/23.webp";
+import copenhagenArmchairDetail3 from "./assets/descriptionImges/23.webp";
 //
 import goldenModernLight from "./assets/imgs/15.jpg";
 import goldenModernLight1 from "./assets/descriptionImges/1.webp";
 import goldenModernLight2 from "./assets/descriptionImges/2.webp";
 //
 
-import sunPendantBlack from "./assets/imgs/16.jpg";
-import sunPendantBlack1 from "./assets/descriptionImges/15.webp";
-import sunPendantBlack2 from "./assets/descriptionImges/16.jpg";
+import sunPendantBlack1 from "./assets/imgs/16.jpg";
+import sunPendantBlack2 from "./assets/descriptionImges/15.webp";
+import sunPendantBlack3 from "./assets/descriptionImges/16.jpg";
 //
 import kitchenfrom from "./assets/imgs/17.jpg";
 import kitchenfrom1 from "./assets/descriptionImges/9.jpg";
@@ -75,9 +75,9 @@ import bodyOil200ml from "./assets/imgs/19.jpg";
 import bodyOilDetail2 from "./assets/descriptionImges/34.jpg";
 import bodyOilDetail3 from "./assets/descriptionImges/35.jpg";
 //
-import cottonPads180 from "./assets/imgs/20.jpg";
-import cottonPads181 from "./assets/descriptionImges/32.jpg";
-import cottonPads182 from "./assets/descriptionImges/33.jpg";
+import cottonPads1 from "./assets/imgs/20.jpg";
+import cottonPads2 from "./assets/descriptionImges/32.jpg";
+import cottonPads3 from "./assets/descriptionImges/33.jpg";
 //
 import iphone from "./assets/imgs/21.png";
 //
@@ -113,8 +113,8 @@ export const PRODUCTS = [
   },
   {
     id: 2,
-    imgDetail1: cubeVaseBlack,
-    imgDetail2: cubeVaseBlack,
+    imgDetail1: cubeVaseBlack3,
+    imgDetail2: cubeVaseBlack2,
     category: "furniture",
     productName: "Cube Lolo Vase Black",
     price: 161,
@@ -282,7 +282,7 @@ export const PRODUCTS = [
   {
     id: 14,
     imgDetail1: copenhagenArmchairDetail2,
-    imgDetail2: copenhagenArmchairDetail2,
+    imgDetail2: copenhagenArmchairDetail3,
     category: "chair",
     productName: "Copenhagen Armchair",
     price: 330,
@@ -309,12 +309,12 @@ export const PRODUCTS = [
   },
   {
     id: 16,
-    imgDetail1: lampLightBlue,
-    imgDetail2: lampLightBlue,
+    imgDetail1: sunPendantBlack3,
+    imgDetail2: sunPendantBlack2,
     category: "lamp",
     productName: "The Sun Pendant Black",
     price: 160,
-    productImage: sunPendantBlack,
+    productImage: sunPendantBlack1,
     specs:
       "The Here Comes The Sun pendant designed by Bertrand Balas is a quality lamp with a unique and magical look. The Here Comes The Sun series has a fantastic expression and especially when turned on it creates a very special atmosphere in the room it hangs in. The lamp fits perfectly above both dining room table, kitchen counter, and as living room lighting.",
     texture: "Plastic",
@@ -323,8 +323,8 @@ export const PRODUCTS = [
   },
   {
     id: 18,
-    imgDetail1: bodyOil200ml,
-    imgDetail2: bodyOil50ml,
+    imgDetail1: bodyOil50ml1,
+    imgDetail2: bodyOil50ml2,
     category: "skin-care",
     productName: "Body Oil 50ml",
     price: 45.0,
@@ -338,7 +338,7 @@ export const PRODUCTS = [
   {
     id: 19,
     imgDetail1: bodyOilDetail3,
-    imgDetail2: bodyOil200ml,
+    imgDetail2: bodyOilDetail2,
     category: "skin-care",
     productName: "Body Oil 200ml",
     price: 67,
@@ -351,12 +351,12 @@ export const PRODUCTS = [
   },
   {
     id: 20,
-    imgDetail1: cottonPads180,
-    imgDetail2: cottonPads180,
+    imgDetail1: cottonPads2,
+    imgDetail2: cottonPads3,
     category: "skin-care",
     productName: "Unbleached Cotton Pads 180",
     price: 33.0,
-    productImage: cottonPads180,
+    productImage: cottonPads1,
     specs:
       "Cotton pads made from soft, unbleached cotton. These are made in Japan and made from 100% cotton.",
     texture: "Cotton",
@@ -393,12 +393,12 @@ export const PRODUCTS = [
   },
   {
     id: 23,
-    imgDetail1: kitchenfrom,
-    imgDetail2: kitchenfrom1,
+    imgDetail1: kitchenfrom1,
+    imgDetail2: kitchenfrom2,
     category: "kitchen",
     productName: "Pop-Up Toaster",
     price: 199.0,
-    productImage: kitchenfrom2,
+    productImage: kitchenfrom,
     specs:
       "With simple and clean rectangular round-cornered design, the large bread slots allow to toast 2 pieces o",
     texture: "Plastic and Metal",
@@ -407,8 +407,8 @@ export const PRODUCTS = [
   },
   {
     id: 24,
-    imgDetail1: WakeLockSentinel,
-    imgDetail2: WakeLockSentinel,
+    imgDetail1: denimJacket,
+    imgDetail2: denimJacket,
     category: "clothes",
     productName: "WLS Van Gogh Denim Jacket",
     price: 228.0,

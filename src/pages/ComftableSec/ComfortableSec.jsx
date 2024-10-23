@@ -57,7 +57,7 @@ const ComfortableSec = () => {
 
           {/* Text side */}
           <div className="lg:w-1/2 lg:pr-12">
-            <div className="space-y-8">
+            <div className="space-y-8 text-center lg:text-left">
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
                 <span className="block mb-2 text-blue-600">Comfortable</span>
                 <span className="block">&amp; Elegante Living</span>

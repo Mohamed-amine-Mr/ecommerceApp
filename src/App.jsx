@@ -38,7 +38,6 @@ function App() {
             <Route path="/categories/:category" element={<Categories />} />
             <Route path="/" element=<Home /> />
             <Route path="/cart" element=<Cart /> />
-            {/* <Route path="/cart/checkoutPage" element={<CheckoutPage />} /> */}
             <Route path="/categories/electronics" element={<ElectrCatego />} />
             <Route path="/categories/clothes" element={<ClothesCatego />} />
             <Route path="/categories/skincare" element={<SkncarCatego />} />
@@ -50,6 +49,7 @@ function App() {
             <Route path="/categories/kitchen" element={<Kitchen />} />
             <Route path="/categories/chairs" element={<ChairsCatego />} />
             <Route path="/categories/all" element={<CategoriesAll />} />
+            {/*  */}
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/productPage/clothesInfo" element={<ClothesInfo />} />
             <Route path="/productPage/kitchenInfo" element={<KitchenInfo />} />

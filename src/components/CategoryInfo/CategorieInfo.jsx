@@ -41,7 +41,7 @@ const CategorieInfo = () => {
           </Link>
         </div>
         <div className="flex flex-wrap gap-2">
-          {categoriesList.map((cat) => (
+          {productDetailNavigation.map((cat) => (
             <Link
               key={cat}
               to={`/productPage/${cat.toLowerCase().replace(" ", "").trim()}`}
