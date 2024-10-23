@@ -1,10 +1,10 @@
-import { PRODUCTS } from "../products";
-import { Categories } from "./components";
-import { Product } from "../pages/shop/product"; // Use the Product component
+import { PRODUCTS } from "../../products";
+import { Categories } from "../components";
+import { Product } from "../../features/shop/product"; // Use the Product component
 
-const ClothesCatego = () => {
+const Kitchen = () => {
   const filteredProducts = PRODUCTS.filter(
-    (product) => product.category === "clothes"
+    (product) => product.category === "kitchen"
   );
 
   return (
@@ -21,4 +21,4 @@ const ClothesCatego = () => {
   );
 };
 
-export default ClothesCatego;
+export default Kitchen;

@@ -3,7 +3,6 @@ import { ShopContext } from "../../context/shop-context";
 import { useContext, useState } from "react";
 import { CartItem } from "./cart-item";
 import { useNavigate } from "react-router-dom";
-
 export const Cart = () => {
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
@@ -187,7 +186,6 @@ export const Cart = () => {
               </form>
             </div>
           )}
-
           {totalAmount === 0 && (
             <div className="text-center py-12">
               <h2 className="text-2xl font-semibold text-gray-600 mb-4">

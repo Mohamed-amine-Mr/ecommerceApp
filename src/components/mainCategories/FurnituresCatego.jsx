@@ -1,10 +1,10 @@
-import { PRODUCTS } from "../products";
-import { Categories } from "./components";
-import { Product } from "../pages/shop/product"; // Use the Product component
+import { PRODUCTS } from "../../products";
+import { Categories } from "../components";
+import { Product } from "../../features/shop/product"; // Use the Product component
 
-const ElectrCatego = () => {
+const FurnituresCatego = () => {
   const filteredProducts = PRODUCTS.filter(
-    (product) => product.category === "electronic"
+    (product) => product.category === "furniture"
   );
 
   return (
@@ -21,4 +21,4 @@ const ElectrCatego = () => {
   );
 };
 
-export default ElectrCatego;
+export default FurnituresCatego;

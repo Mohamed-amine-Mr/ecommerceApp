@@ -1,10 +1,10 @@
-import { PRODUCTS } from "../products";
-import { Categories } from "./components";
-import { Product } from "../pages/shop/product"; // Use the Product component
+import { PRODUCTS } from "../../products";
+import { Categories } from "../components";
+import { Product } from "../../features/shop/product"; // Use the Product component
 
-const LampsCatego = () => {
+const livecomfrCatego = () => {
   const filteredProducts = PRODUCTS.filter(
-    (product) => product.category === "lamp"
+    (product) => product.category === "furniture"
   );
 
   return (
@@ -21,4 +21,4 @@ const LampsCatego = () => {
   );
 };
 
-export default LampsCatego;
+export default livecomfrCatego;

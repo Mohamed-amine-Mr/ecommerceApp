@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
-import livecomfor from "../assets/imgs/home.jpg";
-import electronics from "../assets/imgs/electron.jpg";
-import skinCare from "../assets/imgs/skin.jpg";
-import kitchen from "../assets/imgs/kitchen.jpg";
+import livecomfor from "../../assets/imgs/home.jpg";
+import electronics from "../../assets/imgs/electron.jpg";
+import skinCare from "../../assets/imgs/skin.jpg";
+import kitchen from "../../assets/imgs/kitchen.jpg";
 import {
   ComfortableSec,
   Creativeprod,
-  Footer,
   ProudProducts,
   Trending,
-} from "./pages.jsx";
-
+} from "../pages";
+import { Footer } from "../../components/components";
 const Home = () => {
   return (
     <>

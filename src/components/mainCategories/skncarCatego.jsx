@@ -1,10 +1,10 @@
-import { PRODUCTS } from "../products";
-import { Categories } from "./components";
-import { Product } from "../pages/shop/product"; // Use the Product component
+import { PRODUCTS } from "../../products";
+import { Categories } from "../components";
+import { Product } from "../../features/shop/product"; // Use the Product component
 
-const livecomfrCatego = () => {
+const SkncarCatego = () => {
   const filteredProducts = PRODUCTS.filter(
-    (product) => product.category === "furniture"
+    (product) => product.category === "skin-care"
   );
 
   return (
@@ -21,4 +21,4 @@ const livecomfrCatego = () => {
   );
 };
 
-export default livecomfrCatego;
+export default SkncarCatego;

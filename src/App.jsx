@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Shop } from "./pages/shop/shop";
-import { Cart } from "./pages/cart/cart";
-import { ShopContextProvider } from "./context/shop-context";
-import { Home } from "./pages/pages";
+import { Cart } from "./features/cart/cart.jsx";
+
+import { ShopContextProvider } from "./context/shop-context.jsx";
+import { Home } from "./pages/pages.jsx";
 import {
   Navbar,
   ElectrCatego,
@@ -14,7 +14,6 @@ import {
   ChairsCatego,
   ProductDetails,
   Categories,
-  ProductPageList,
   SkinCareInfo,
   ClothesInfo,
   FurnituresInfo,
@@ -25,6 +24,7 @@ import {
   Kitchen,
   KitchenInfo,
   ScrollToTop,
+  ProductPageList,
 } from "./components/components.jsx";
 function App() {
   return (
@@ -37,7 +37,6 @@ function App() {
           <Routes>
             <Route path="/categories/:category" element={<Categories />} />
             <Route path="/" element=<Home /> />
-            <Route path="/shop" element=<Shop /> />
             <Route path="/cart" element=<Cart /> />
             {/* <Route path="/cart/checkoutPage" element={<CheckoutPage />} /> */}
             <Route path="/categories/electronics" element={<ElectrCatego />} />
@@ -52,7 +51,6 @@ function App() {
             <Route path="/categories/chairs" element={<ChairsCatego />} />
             <Route path="/categories/all" element={<CategoriesAll />} />
             <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/productPage" element={<ProductPageList />} />
             <Route path="/productPage/clothesInfo" element={<ClothesInfo />} />
             <Route path="/productPage/kitchenInfo" element={<KitchenInfo />} />
             <Route
@@ -74,6 +72,7 @@ function App() {
               path="/productPage/allProductInfo"
               element={<AllProductInfo />}
             />
+            <Route path="/productPage" element={<ProductPageList />} />
           </Routes>
         </Router>
       </ShopContextProvider>

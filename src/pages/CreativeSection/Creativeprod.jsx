@@ -1,7 +1,23 @@
-import creativeprod from "../assets/imgs/creativeproducts.jpg";
+import { useState, useRef } from "react";
+import { Play } from "lucide-react";
+import video from "./addVideo.mp4";
 import { Link } from "react-router-dom";
 
 const Creativeprod = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
+
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <div className="bg-gray-100 py-16 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,14 +38,22 @@ const Creativeprod = () => {
             </Link>
           </div>
 
-          {/* Image side */}
+          {/* video side */}
           <div className="lg:w-1/2">
             <div className="relative overflow-hidden rounded-lg shadow-xl">
-              <img
-                src={creativeprod}
-                alt="Creative products"
-                className="w-full h-auto object-cover "
+              <video
+                ref={videoRef}
+                src={video}
+                className="w-full h-auto object-cover cursor-pointer"
+                onClick={handleVideoClick}
               />
+              {!isPlaying && (
+                <Play
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 cursor-pointer"
+                  size={40}
+                  onClick={handleVideoClick}
+                />
+              )}
             </div>
           </div>
         </div>

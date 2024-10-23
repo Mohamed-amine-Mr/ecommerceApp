@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const CategorieInfo = () => {
-  const categoriesList = [
+  const productDetailNavigation = [
     "All Product Info",
     "Furnitures Info",
     "Electronics Info",
