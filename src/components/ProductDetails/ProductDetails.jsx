@@ -1,34 +1,62 @@
 import { useParams } from "react-router-dom";
 import { PRODUCTS } from "../../products";
-import { useState } from "react";
-// import { Link } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import { ShopContext } from "../../context/shop-context";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  // const navigate = useNavigate();
   const product = PRODUCTS.find((p) => p.id === parseInt(id));
-
-  // State to track the currently displayed image
-
-  if (!product) {
-    return <div className="">Product not found</div>;
-  }
   const { addToCart, cartItems, removeFromCart, updateCartItemCount } =
     useContext(ShopContext);
+
+  // Add showCheckout state
+  const [showCheckout, setShowCheckout] = useState(false);
+  // Add form state
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    address: "",
+    cardNumber: "",
+  });
+
   const [currentImage, setCurrentImage] = useState(product?.productImage);
+  const [totalPrice, setTotalPrice] = useState(product?.price || 0);
+  const cartItemAmount = cartItems[product?.id] || 0;
 
-  const [totalPrice, setTotalPrice] = useState(product.price);
-  const cartItemAmount = cartItems[product.id] || 0;
-
-  // Update total price whenever quantity changes
   useEffect(() => {
-    setTotalPrice(product.price * cartItemAmount);
-  }, [cartItemAmount, product.price]);
+    if (product) {
+      setTotalPrice(product.price * cartItemAmount);
+    }
+  }, [cartItemAmount, product]);
+
+  if (!product) {
+    return <div className="text-center py-12">Product not found</div>;
+  }
+
+  // Add form input handler
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Add order submit handler
+  const handleSubmitOrder = (e) => {
+    e.preventDefault();
+    alert(
+      `Order placed successfully! Total: $${(totalPrice + 9.99).toFixed(2)}`
+    );
+    console.log("Order details:", formData);
+    setShowCheckout(false);
+  };
 
   return (
-    <>
-      <div className="container mx-auto px-4 py-28">
+    <div className="container mx-auto px-4 py-28">
+      {!showCheckout ? (
+        // Product Details View
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 lg:w-1/2 md:pr-8">
             <img
@@ -37,36 +65,23 @@ const ProductDetails = () => {
               className="w-full rounded-lg shadow-lg object-cover aspect-square"
             />
             <div className="flex mt-4 space-x-4">
-              <img
-                src={product.productImage}
-                alt="Main"
-                className={`w-20 h-20 rounded-md cursor-pointer object-cover transition-opacity ${
-                  currentImage === product.productImage
-                    ? "ring-2 ring-black"
-                    : "opacity-70 hover:opacity-100"
-                }`}
-                onClick={() => setCurrentImage(product.productImage)}
-              />
-              <img
-                src={product.imgDetail1}
-                alt="Detail 1"
-                className={`w-20 h-20 rounded-md cursor-pointer object-cover transition-opacity ${
-                  currentImage === product.imgDetail1
-                    ? "ring-2 ring-black"
-                    : "opacity-70 hover:opacity-100"
-                }`}
-                onClick={() => setCurrentImage(product.imgDetail1)}
-              />
-              <img
-                src={product.imgDetail2}
-                alt="Detail 2"
-                className={`w-20 h-20 rounded-md cursor-pointer object-cover transition-opacity ${
-                  currentImage === product.imgDetail2
-                    ? "ring-2 ring-black"
-                    : "opacity-70 hover:opacity-100"
-                }`}
-                onClick={() => setCurrentImage(product.imgDetail2)}
-              />
+              {[
+                product.productImage,
+                product.imgDetail1,
+                product.imgDetail2,
+              ].map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Product view ${index + 1}`}
+                  className={`w-20 h-20 rounded-md cursor-pointer object-cover transition-opacity ${
+                    currentImage === img
+                      ? "ring-2 ring-black"
+                      : "opacity-70 hover:opacity-100"
+                  }`}
+                  onClick={() => setCurrentImage(img)}
+                />
+              ))}
             </div>
           </div>
           <div className="md:w-1/2 lg:w-1/2 md:pl-8 mt-8 md:mt-0">
@@ -103,7 +118,7 @@ const ProductDetails = () => {
                     }}
                   />
                   <button
-                    className="bg-white px-4 py-2 rounded-r hover:bg-gray-300  transition-colors"
+                    className="bg-gray-200 px-4 py-2 rounded-r hover:bg-gray-300 transition-colors"
                     onClick={() => addToCart(product.id)}
                   >
                     +
@@ -131,7 +146,10 @@ const ProductDetails = () => {
                   </span>
                 )}
               </button>
-              <button className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition-colors">
+              <button
+                className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition-colors"
+                onClick={() => setShowCheckout(true)} // Add click handler here
+              >
                 BUY NOW
               </button>
             </div>
@@ -152,84 +170,124 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      ) : (
+        // Checkout Form View
+        <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6 md:p-8">
+          <button
+            onClick={() => setShowCheckout(false)}
+            className="mb-6 text-blue-600 hover:text-blue-800"
+          >
+            ← Back to Product
+          </button>
+
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+            Checkout
+          </h1>
+
+          <form onSubmit={handleSubmitOrder} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  className="w-full p-2 border border-gray-300 rounded-md"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  className="w-full p-2 border border-gray-300 rounded-md"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="w-full p-2 border border-gray-300 rounded-md"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Shipping Address
+              </label>
+              <input
+                type="text"
+                name="address"
+                value={formData.address}
+                onChange={handleInputChange}
+                className="w-full p-2 border border-gray-300 rounded-md"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Card Number
+              </label>
+              <input
+                type="text"
+                name="cardNumber"
+                value={formData.cardNumber}
+                onChange={handleInputChange}
+                className="w-full p-2 border border-gray-300 rounded-md"
+                placeholder="1234 5678 9012 3456"
+                required
+              />
+            </div>
+
+            <div className="mt-6 bg-gray-50 p-4 rounded-md">
+              <h3 className="text-lg font-bold mb-4">Order Summary</h3>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span>Subtotal</span>
+                  <span>${totalPrice.toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Shipping</span>
+                  <span>$9.99</span>
+                </div>
+                <div className="border-t pt-2 mt-2">
+                  <div className="flex justify-between font-bold">
+                    <span>Total</span>
+                    <span>${(totalPrice + 9.99).toFixed(2)}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors duration-300 mt-6"
+            >
+              Place Order ${(totalPrice + 9.99).toFixed(2)}
+            </button>
+          </form>
+        </div>
+      )}
+    </div>
   );
 };
 
 export default ProductDetails;
-// import { useParams } from "react-router-dom";
-// import { PRODUCTS } from "../../products";
-// const ProductDetails = () => {
-//   const { id } = useParams();
-//   const product = PRODUCTS.find((p) => p.id === parseInt(id));
-
-//   if (!product) {
-//     return <div className="h-96 bg-red-700">Product not found</div>;
-//   }
-//   return (
-//     <div className="container mx-auto px-4 py-28">
-//       <div className="flex flex-col md:flex-row">
-//         <div className="md:w-1/2 lg:w-1/2 md:pr-8">
-//           <img
-//             src={product.productImage}
-//             alt={product.productName}
-//             className="w-full rounded-lg shadow-lg"
-//           />
-//           <div className="flex mt-4 space-x-4">
-//             <img
-//               src={product.imgDetail1}
-//               alt="Detail 1"
-//               className="w-20 h-20 rounded-md cursor-pointer"
-//             />
-
-//             <img
-//               src={product.imgDetail2}
-//               alt="Detail 3"
-//               className="w-20 h-20 rounded-md cursor-pointer"
-//             />
-//           </div>
-//         </div>
-//         <div className="md:w-1/2 lg:w-1/2 md:pl-8 mt-8 md:mt-0">
-//           <h1 className="text-3xl font-bold mb-4">{product.productName}</h1>
-//           <p className="text-gray-600 mb-6">{product.specs}</p>
-
-//           <div className="flex items-center mb-6">
-//             <span className="mr-4">Quantity</span>
-//             <button className="bg-gray-200 px-3 py-1 rounded-l">-</button>
-//             <input
-//               type="text"
-//               defaultValue="1"
-//               className="w-12 text-center border-t border-b border-gray-200"
-//             />
-//             <button className="bg-gray-200 px-3 py-1 rounded-r">+</button>
-//           </div>
-
-//           <p className="text-2xl font-bold mb-6">${product.price.toFixed(2)}</p>
-
-//           <div className="flex space-x-4">
-//             <button className="bg-white text-black border border-black px-6 py-2 rounded">
-//               ADD TO CART
-//             </button>
-//             <button className="bg-red-600 text-white px-6 py-2 rounded">
-//               BUY NOW
-//             </button>
-//           </div>
-
-//           <div className="mt-8">
-//             <p>
-//               <strong>Texture:</strong> {product.texture}
-//             </p>
-//             <p>
-//               <strong>Weight:</strong> {product.weight}
-//             </p>
-//             <p>
-//               <strong>Size:</strong> {product.size}
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-// export default ProductDetails;

@@ -13,6 +13,7 @@ const ProductPage = ({ detail }) => {
   useEffect(() => {
     setTotalPrice(detail.price * cartItemAmount);
   }, [cartItemAmount, detail.price]);
+  // Add form state
 
   return (
     <>
