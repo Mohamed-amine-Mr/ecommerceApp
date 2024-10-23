@@ -24,3 +24,4 @@ export { default as ClothesInfo } from "./CategoriesInfo/ClothesInfo";
 export { default as KitchenInfo } from "./CategoriesInfo/KitchenInfo";
 
 export { default as AllProductInfo } from "./CategoriesInfo/AllProductInfo";
+export { default as ScrollToTop } from "./ScrollToTop";

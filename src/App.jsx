@@ -24,6 +24,7 @@ import {
   AllProductInfo,
   Kitchen,
   KitchenInfo,
+  ScrollToTop,
 } from "./components/components.jsx";
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
       <ShopContextProvider>
         <Router>
           <Navbar />
+          <ScrollToTop />
+
           <Routes>
             <Route path="/categories/:category" element={<Categories />} />
             <Route path="/" element=<Home /> />
