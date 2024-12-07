@@ -1,6 +1,6 @@
 import { PRODUCTS } from "../../products";
 import { Categories } from "../components";
-import { Product } from "../../features/shop/product"; // Use the Product component
+import { Product } from "../../features/shop/product"; 
 
 const AllCategories = () => {
   return (
